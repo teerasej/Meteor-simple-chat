@@ -8,11 +8,13 @@ Template.messagebox.events({
         // console.log('Got message: ');
         // console.log(input.value);
 
-        Message.insert({
-            text: input.value,
-            userId: Meteor.userId(),
-            createdAt: new Date()
-        });
+        Meteor.call("commitMessage", input.value);
+
+        // Message.insert({
+        //     text: input.value,
+        //     userId: Meteor.userId(),
+        //     createdAt: new Date()
+        // });
 
         template.find("#js-messagebox").value = "";
     }
