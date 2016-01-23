@@ -5,13 +5,16 @@ Template.chatroom.helpers({
 });
 
 Template.chatBalloon.helpers({
-    layoutBalloon: function(user){
-        if (user == "Pon") {
+    layoutBalloon: function(userId){
+        if (userId == Meteor.userId()) {
             return "user-message";
         } else {
             return "they-message";
         }
     },
+    getUsername: function(userId){
+        return Meteor.users.findOne({_id:userId}).username;
+    }
     // spacerSize: function(user) {
     //     console.log(user);
     //     if (user == "Pon") {
