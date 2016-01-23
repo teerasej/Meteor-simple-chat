@@ -1,0 +1,71 @@
+/* CSS declarations go here */
+
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    /*min-height: 100%;*/
+    height: auto !important;
+    /*height: 100%;*/
+    margin: 0 auto -60px;
+  
+}
+
+/* Chat Row */
+
+.chat-row {
+
+}
+.chat-spacer {
+	clear: right;
+	margin-bottom: 20px;
+}
+/* End Chat Row */
+
+/* Chat balloon */
+
+.message {
+	padding: 10px;
+    background: #c2f09c;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.username {
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+.they-message .spacer {
+	width: 0px;
+}
+.they-message .balloon {
+	display: inline-block;
+}
+
+.user-message .spacer {
+	
+}
+.user-message .balloon {
+	float: right;
+	display: inline-block;
+}
+.user-message .message {
+	text-align: right;
+}
+.user-message .username {
+	text-align: right;
+}
+
+/* End Chat balloon */
+
+.push,
+.footer {
+    height: 60px;
+}
+
+.footer {
+    background-color: **#f5f5f5**;
+}

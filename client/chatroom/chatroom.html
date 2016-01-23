@@ -1,0 +1,18 @@
+<template name="chatroom">
+    <div class="wrap">
+        <div class="container-fluid">
+            {{#each messages}} {{> chatBalloon}} {{/each}}
+        </div>
+    </div>
+    <div class="push"></div>
+</template>
+<template name="chatBalloon">
+    <div class="chat-row {{layoutBalloon user}}">
+    	<div class="spacer"></div>
+        <div class="balloon">
+            <div class="message">{{text}}</div>
+            <div class="username">{{user}}</div>
+        </div>
+    </div>
+    <div class="chat-spacer"></div>
+</template>
