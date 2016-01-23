@@ -7,11 +7,11 @@
     <div class="push"></div>
 </template>
 <template name="chatBalloon">
-    <div class="chat-row {{layoutBalloon user}}">
+    <div class="chat-row {{layoutBalloon userId}}">
     	<div class="spacer"></div>
         <div class="balloon">
             <div class="message">{{text}}</div>
-            <div class="username">{{user}}</div>
+            <div class="username">{{getUsername userId}}</div>
         </div>
     </div>
     <div class="chat-spacer"></div>
