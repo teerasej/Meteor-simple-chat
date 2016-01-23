@@ -10,7 +10,7 @@ Template.messagebox.events({
 
         Message.insert({
             text: input.value,
-            user: 'Pon',
+            userId: Meteor.userId(),
             createdAt: new Date()
         });
 
