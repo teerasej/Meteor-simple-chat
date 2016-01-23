@@ -1,14 +1,21 @@
 Meteor.publish("messages", function() {
     if (!this.userId) {
-      console.log('User not found... no publish');
+        // console.log('User not found... no publish');
         return [];
     } else {
-      console.log('Publish data to user: ' + this.userId);
+        // console.log('Publish data to user: ' + this.userId);
         return Message.find();
     }
 });
 
-
+Meteor.publish("usersInRoom", function() {
+    return Meteor.users.find({}, {
+        fields: {
+            '_id': 1,
+            'username': 1
+        }
+    });
+});
 
 
 Meteor.methods({
